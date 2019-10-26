@@ -30,17 +30,17 @@ enum AppTheme {
     }
     
     /// hex FFFFFF
-    public static func backgroundContent(alpha: CGFloat) -> UIColor {
+    public static func backgroundContent(alpha: CGFloat = 1.0) -> UIColor {
         switch AppThemeManager.current.type {
         case .dark:
             return UIColor(hex: "101E34", alpha: alpha)
         }
     }
     
-    public static var backgroundControl: UIColor {
+    public static func backgroundControl(alpha: CGFloat = 1.0) -> UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "1A2F51", alpha: 1.0)
+            return UIColor(hex: "1A2F51", alpha: alpha)
         }
     }
     

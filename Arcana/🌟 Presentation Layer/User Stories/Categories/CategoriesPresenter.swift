@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import GKRepresentable
 
 protocol CategoriesPresenterInput: ViperPresenterInput { }
 
@@ -46,9 +47,28 @@ class CategoriesPresenter: ViperPresenter, CategoriesPresenterInput, CategoriesV
     // MARK: - CategoriesViewOutput
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
+        
+        self.interactor?.loadCategories()
     }
     
     // MARK: - CategoriesInteractorOutput
+    func provideCategories(_ categories: [CategoryModel]) {
+        self.makeSectionsModel(with: categories)
+    }
     
     // MARK: - Module functions
+    private func makeSectionsModel(with categories: [CategoryModel]) {
+        let mainSection = TableSectionModel()
+        
+        for category in categories {
+            let categoryRow = CategoryCellModel(category: category)
+            mainSection.rows.append(categoryRow)
+        }
+        
+        if mainSection.rows.isEmpty {
+            self.view?.updateForSections([])
+        } else {
+            self.view?.updateForSections([mainSection])
+        }
+    }
 }

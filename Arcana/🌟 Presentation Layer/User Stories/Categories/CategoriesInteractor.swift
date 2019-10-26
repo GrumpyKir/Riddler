@@ -8,9 +8,13 @@
 
 import GKViper
 
-protocol CategoriesInteractorInput: ViperInteractorInput { }
+protocol CategoriesInteractorInput: ViperInteractorInput {
+    func loadCategories()
+}
 
-protocol CategoriesInteractorOutput: ViperInteractorOutput { }
+protocol CategoriesInteractorOutput: ViperInteractorOutput {
+    func provideCategories(_ categories: [CategoryModel])
+}
 
 open class CategoriesInteractor: ViperInteractor, CategoriesInteractorInput {
 
@@ -22,12 +26,29 @@ open class CategoriesInteractor: ViperInteractor, CategoriesInteractorInput {
         return output
     }
     
+    var categoriesUseCase: CategoriesUseCaseInput
+    
     // MARK: - Initialization
-    override init() {        
+    override init() {
+        self.categoriesUseCase = CategoriesUseCase()
+        
         super.init()
+        
+        self.categoriesUseCase.subscribe(with: self)
     }
     
     // MARK: - CategoriesInteractorInput
+    func loadCategories() {
+        self.categoriesUseCase.loadCategories()
+    }
     
     // MARK: - Module functions
+}
+
+extension CategoriesInteractor: CategoriesUseCaseOutput {
+    
+    func provideCategories(_ categories: [CategoryModel]) {
+        self.output?.provideCategories(categories)
+    }
+    
 }

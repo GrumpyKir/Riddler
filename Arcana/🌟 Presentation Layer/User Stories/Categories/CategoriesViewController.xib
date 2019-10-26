@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
-                    <blurEffect style="systemThinMaterialDark"/>
+                    <blurEffect style="regular"/>
                 </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rc2-TL-d50">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -90,7 +90,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTr-ON-SjP">
-                            <rect key="frame" x="62" y="444" width="219" height="64"/>
+                            <rect key="frame" x="64" y="444" width="215" height="64"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="H4v-hM-dbt"/>
                             </constraints>
@@ -101,11 +101,11 @@
                     <constraints>
                         <constraint firstItem="4QY-CD-vTV" firstAttribute="centerX" secondItem="4T6-oG-pCO" secondAttribute="centerX" id="3hf-Ca-z7g"/>
                         <constraint firstAttribute="bottom" secondItem="LTr-ON-SjP" secondAttribute="bottom" constant="80" id="4KM-QN-jf0"/>
-                        <constraint firstAttribute="trailing" secondItem="LTr-ON-SjP" secondAttribute="trailing" constant="62" id="5oJ-RM-CgC"/>
+                        <constraint firstAttribute="trailing" secondItem="LTr-ON-SjP" secondAttribute="trailing" constant="64" id="5oJ-RM-CgC"/>
                         <constraint firstAttribute="trailing" secondItem="HXG-iG-Tzu" secondAttribute="trailing" constant="32" id="Gqt-YU-Q2f"/>
                         <constraint firstItem="LTr-ON-SjP" firstAttribute="centerX" secondItem="4T6-oG-pCO" secondAttribute="centerX" id="H2Q-34-fvH"/>
                         <constraint firstItem="HXG-iG-Tzu" firstAttribute="leading" secondItem="4T6-oG-pCO" secondAttribute="leading" constant="32" id="LNS-LY-icp"/>
-                        <constraint firstItem="LTr-ON-SjP" firstAttribute="leading" secondItem="4T6-oG-pCO" secondAttribute="leading" constant="62" id="MzP-Qz-1q7"/>
+                        <constraint firstItem="LTr-ON-SjP" firstAttribute="leading" secondItem="4T6-oG-pCO" secondAttribute="leading" constant="64" id="MzP-Qz-1q7"/>
                         <constraint firstItem="HXG-iG-Tzu" firstAttribute="centerX" secondItem="4T6-oG-pCO" secondAttribute="centerX" id="SdC-Fc-rj1"/>
                         <constraint firstAttribute="trailing" secondItem="4QY-CD-vTV" secondAttribute="trailing" constant="16" id="Ugu-V4-fC6"/>
                         <constraint firstItem="LTr-ON-SjP" firstAttribute="top" secondItem="4QY-CD-vTV" secondAttribute="bottom" constant="28" id="WtQ-RR-gy4"/>

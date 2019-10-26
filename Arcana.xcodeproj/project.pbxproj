@@ -17,11 +17,21 @@
 		ED213ECC2364506900A56E1C /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED213EC52364506900A56E1C /* CategoriesViewController.xib */; };
 		ED213ECD2364506900A56E1C /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EC62364506900A56E1C /* CategoriesPresenter.swift */; };
 		ED213ED02364507C00A56E1C /* CategoriesLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213ECF2364507C00A56E1C /* CategoriesLocalization.swift */; };
-		ED213ED22364508800A56E1C /* StylyWrapper+Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */; };
+		ED213ED22364508800A56E1C /* StyleWrapper+Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213ED12364508800A56E1C /* StyleWrapper+Categories.swift */; };
 		ED213ED7236473B900A56E1C /* FiraSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED213ED4236473B900A56E1C /* FiraSans-SemiBold.ttf */; };
 		ED213ED8236473B900A56E1C /* FiraSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED213ED5236473B900A56E1C /* FiraSans-ExtraBold.ttf */; };
 		ED213ED9236473B900A56E1C /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED213ED6236473B900A56E1C /* FiraSans-Regular.ttf */; };
 		ED213EDB236473CA00A56E1C /* FiraSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EDA236473CA00A56E1C /* FiraSans.swift */; };
+		ED213EDD23648D0300A56E1C /* RiddlerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EDC23648D0300A56E1C /* RiddlerRepository.swift */; };
+		ED213EE023648D2300A56E1C /* Riddler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED213EDE23648D2300A56E1C /* Riddler.xcdatamodeld */; };
+		ED213EE423648D5600A56E1C /* CategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EE323648D5600A56E1C /* CategoriesRepository.swift */; };
+		ED213EE623648D7100A56E1C /* CategoriesRemoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EE523648D7100A56E1C /* CategoriesRemoteRouter.swift */; };
+		ED213EE923648DDE00A56E1C /* CategoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EE823648DDE00A56E1C /* CategoriesUseCase.swift */; };
+		ED213EEC23648DEF00A56E1C /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EEB23648DEF00A56E1C /* CategoryModel.swift */; };
+		ED213EEE23648E0200A56E1C /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EED23648E0200A56E1C /* CategoryResponse.swift */; };
+		ED213EF12364939F00A56E1C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EF02364939F00A56E1C /* CategoryCell.swift */; };
+		ED213EF3236493AA00A56E1C /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED213EF2236493AA00A56E1C /* CategoryCell.xib */; };
+		ED213EF5236493B400A56E1C /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EF4236493B400A56E1C /* CategoryCellModel.swift */; };
 		ED4BA8792364326300A6D4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BA8782364326300A6D4BF /* AppDelegate.swift */; };
 		ED4BA8822364326600A6D4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4BA8812364326600A6D4BF /* Assets.xcassets */; };
 		ED4BA8852364326600A6D4BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4BA8832364326600A6D4BF /* LaunchScreen.storyboard */; };
@@ -70,11 +80,21 @@
 		ED213EC52364506900A56E1C /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		ED213EC62364506900A56E1C /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
 		ED213ECF2364507C00A56E1C /* CategoriesLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLocalization.swift; sourceTree = "<group>"; };
-		ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StylyWrapper+Categories.swift"; sourceTree = "<group>"; };
+		ED213ED12364508800A56E1C /* StyleWrapper+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleWrapper+Categories.swift"; sourceTree = "<group>"; };
 		ED213ED4236473B900A56E1C /* FiraSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		ED213ED5236473B900A56E1C /* FiraSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED213ED6236473B900A56E1C /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
 		ED213EDA236473CA00A56E1C /* FiraSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiraSans.swift; sourceTree = "<group>"; };
+		ED213EDC23648D0300A56E1C /* RiddlerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddlerRepository.swift; sourceTree = "<group>"; };
+		ED213EDF23648D2300A56E1C /* Riddler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Riddler.xcdatamodel; sourceTree = "<group>"; };
+		ED213EE323648D5600A56E1C /* CategoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRepository.swift; sourceTree = "<group>"; };
+		ED213EE523648D7100A56E1C /* CategoriesRemoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRemoteRouter.swift; sourceTree = "<group>"; };
+		ED213EE823648DDE00A56E1C /* CategoriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesUseCase.swift; sourceTree = "<group>"; };
+		ED213EEB23648DEF00A56E1C /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		ED213EED23648E0200A56E1C /* CategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponse.swift; sourceTree = "<group>"; };
+		ED213EF02364939F00A56E1C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		ED213EF2236493AA00A56E1C /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		ED213EF4236493B400A56E1C /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
 		ED4BA8752364326300A6D4BF /* Riddler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riddler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4BA8782364326300A6D4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4BA8812364326600A6D4BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				ED213ECF2364507C00A56E1C /* CategoriesLocalization.swift */,
-				ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */,
+				ED213ED12364508800A56E1C /* StyleWrapper+Categories.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,6 +196,51 @@
 				ED213EDA236473CA00A56E1C /* FiraSans.swift */,
 			);
 			path = "Fira Sans";
+			sourceTree = "<group>";
+		};
+		ED213EE123648D2700A56E1C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ED213EE323648D5600A56E1C /* CategoriesRepository.swift */,
+				ED213EE523648D7100A56E1C /* CategoriesRemoteRouter.swift */,
+				ED213EE223648D4100A56E1C /* Models */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		ED213EE223648D4100A56E1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED213EED23648E0200A56E1C /* CategoryResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED213EE723648DD000A56E1C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ED213EE823648DDE00A56E1C /* CategoriesUseCase.swift */,
+				ED213EEA23648DE300A56E1C /* Models */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		ED213EEA23648DE300A56E1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED213EEB23648DEF00A56E1C /* CategoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED213EEF2364939200A56E1C /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED213EF02364939F00A56E1C /* CategoryCell.swift */,
+				ED213EF2236493AA00A56E1C /* CategoryCell.xib */,
+				ED213EF4236493B400A56E1C /* CategoryCellModel.swift */,
+			);
+			path = CategoryCell;
 			sourceTree = "<group>";
 		};
 		ED4BA86C2364326300A6D4BF = {
@@ -226,6 +291,9 @@
 		ED4BA88D236433A400A6D4BF /* 🧠 Data Layer */ = {
 			isa = PBXGroup;
 			children = (
+				ED213EDE23648D2300A56E1C /* Riddler.xcdatamodeld */,
+				ED213EDC23648D0300A56E1C /* RiddlerRepository.swift */,
+				ED213EE123648D2700A56E1C /* Categories */,
 			);
 			path = "🧠 Data Layer";
 			sourceTree = "<group>";
@@ -233,6 +301,7 @@
 		ED4BA88E236433F100A6D4BF /* 🧩 Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
+				ED213EE723648DD000A56E1C /* Categories */,
 			);
 			path = "🧩 Domain Layer";
 			sourceTree = "<group>";
@@ -340,6 +409,7 @@
 		ED5E8A9A23643B4B004F8CE6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ED213EEF2364939200A56E1C /* CategoryCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -483,6 +553,7 @@
 				ED4BA897236435BC00A6D4BF /* Localizable.strings in Resources */,
 				ED213ED8236473B900A56E1C /* FiraSans-ExtraBold.ttf in Resources */,
 				ED213ECC2364506900A56E1C /* CategoriesViewController.xib in Resources */,
+				ED213EF3236493AA00A56E1C /* CategoryCell.xib in Resources */,
 				ED5E8AC923643E78004F8CE6 /* MainViewController.xib in Resources */,
 				ED4BA8822364326600A6D4BF /* Assets.xcassets in Resources */,
 				ED5E8AB223643D79004F8CE6 /* InitialViewController.xib in Resources */,
@@ -560,29 +631,38 @@
 				ED213EBE2364460A00A56E1C /* UISpringTimingParameters+Initialization.swift in Sources */,
 				ED5E8A9E23643B6E004F8CE6 /* BasicNavigationController.swift in Sources */,
 				ED5E8AC523643E78004F8CE6 /* MainViewController.swift in Sources */,
+				ED213EE923648DDE00A56E1C /* CategoriesUseCase.swift in Sources */,
 				ED5E8AAF23643D79004F8CE6 /* InitialAssembly.swift in Sources */,
 				ED5E8AAE23643D79004F8CE6 /* InitialViewController.swift in Sources */,
 				ED5E8AA123643C6D004F8CE6 /* AppTheme.swift in Sources */,
 				ED5E8AB723643DB6004F8CE6 /* StylyWrapper+Initial.swift in Sources */,
 				ED5E8AB523643D91004F8CE6 /* InitialLocalization.swift in Sources */,
 				ED213EDB236473CA00A56E1C /* FiraSans.swift in Sources */,
+				ED213EF5236493B400A56E1C /* CategoryCellModel.swift in Sources */,
 				ED4BA89F2364362B00A6D4BF /* AppConfiguration.swift in Sources */,
+				ED213EE023648D2300A56E1C /* Riddler.xcdatamodeld in Sources */,
+				ED213EEE23648E0200A56E1C /* CategoryResponse.swift in Sources */,
 				ED5E8AB323643D79004F8CE6 /* InitialPresenter.swift in Sources */,
 				ED5E8A9423643A20004F8CE6 /* Stylable.swift in Sources */,
 				ED4BA89D2364361200A6D4BF /* AppLocalization.swift in Sources */,
-				ED213ED22364508800A56E1C /* StylyWrapper+Categories.swift in Sources */,
+				ED213ED22364508800A56E1C /* StyleWrapper+Categories.swift in Sources */,
 				ED5E8AB023643D79004F8CE6 /* InitialInteractor.swift in Sources */,
 				ED213EC82364506900A56E1C /* CategoriesViewController.swift in Sources */,
 				ED4BA8A1236436A700A6D4BF /* Localizable.swift in Sources */,
+				ED213EE423648D5600A56E1C /* CategoriesRepository.swift in Sources */,
 				ED5E8ACE23643EA9004F8CE6 /* MainLocalization.swift in Sources */,
 				ED4BA8792364326300A6D4BF /* AppDelegate.swift in Sources */,
+				ED213EF12364939F00A56E1C /* CategoryCell.swift in Sources */,
 				ED5E8AB123643D79004F8CE6 /* InitialRouter.swift in Sources */,
+				ED213EE623648D7100A56E1C /* CategoriesRemoteRouter.swift in Sources */,
 				ED213ED02364507C00A56E1C /* CategoriesLocalization.swift in Sources */,
 				ED5E8AD023643EBE004F8CE6 /* StyleWrapper+Main.swift in Sources */,
 				ED213ECD2364506900A56E1C /* CategoriesPresenter.swift in Sources */,
 				ED5E8AC823643E78004F8CE6 /* MainRouter.swift in Sources */,
 				ED5E8AC423643E78004F8CE6 /* MainViewModel.swift in Sources */,
+				ED213EDD23648D0300A56E1C /* RiddlerRepository.swift in Sources */,
 				ED5E8AA323643C88004F8CE6 /* AppThemeManager.swift in Sources */,
+				ED213EEC23648DEF00A56E1C /* CategoryModel.swift in Sources */,
 				ED5E8A9623643A2B004F8CE6 /* StyleWrapper.swift in Sources */,
 				ED213EC72364506900A56E1C /* CategoriesViewModel.swift in Sources */,
 				ED5E8ACA23643E78004F8CE6 /* MainPresenter.swift in Sources */,
@@ -802,6 +882,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ED213EDE23648D2300A56E1C /* Riddler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ED213EDF23648D2300A56E1C /* Riddler.xcdatamodel */,
+			);
+			currentVersion = ED213EDF23648D2300A56E1C /* Riddler.xcdatamodel */;
+			path = Riddler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ED4BA86D2364326300A6D4BF /* Project object */;
 }

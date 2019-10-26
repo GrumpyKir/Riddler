@@ -1,5 +1,5 @@
 //
-//  StylyWrapper+Categories.swift
+//  StyleWrapper+Categories.swift
 //  Arcana
 //
 //  Created by  Кирилл on 10/26/19.

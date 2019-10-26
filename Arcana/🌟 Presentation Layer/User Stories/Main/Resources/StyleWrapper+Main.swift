@@ -47,7 +47,7 @@ extension StyleWrapper where Element: UIButton {
         return .wrap { button in
             button.setImage(AppAssets.settingsIcon, for: [])
             button.imageView?.setImageColor(color: AppTheme.accentMain)
-            button.backgroundColor = AppTheme.backgroundControl
+            button.backgroundColor = AppTheme.backgroundControl()
             button.layer.cornerRadius = button.bounds.height * 0.5
             button.layer.masksToBounds = true
         }
@@ -58,7 +58,7 @@ extension StyleWrapper where Element: UIButton {
             button.setTitle("", for: [])
             button.setImage(AppAssets.helpIcon, for: [])
             button.imageView?.setImageColor(color: AppTheme.accentMain)
-            button.backgroundColor = AppTheme.backgroundControl
+            button.backgroundColor = AppTheme.backgroundControl()
             button.layer.cornerRadius = button.bounds.height * 0.5
             button.layer.masksToBounds = true
         }

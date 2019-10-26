@@ -7,8 +7,12 @@
 //
 
 import GKViper
+import GKRepresentable
+import Spruce
 
-protocol CategoriesViewInput: ViperViewInput { }
+protocol CategoriesViewInput: ViperViewInput {
+    func updateForSections(_ sections: [TableSectionModel])
+}
 
 protocol CategoriesViewOutput: ViperViewOutput { }
 
@@ -35,6 +39,8 @@ class CategoriesViewController: ViperViewController, CategoriesViewInput {
         return output
     }
     
+    private var sections: [TableSectionModel] = []
+    
     // MARK: - Lifecycle
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -56,7 +62,12 @@ class CategoriesViewController: ViperViewController, CategoriesViewInput {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         self.backLabel.text = CategoriesLocalization.backTitle.localized
+        
         self.categoriesTitleLabel.text = CategoriesLocalization.categoryTitle.localized
+        
+        self.categoriesTableView.dataSource = self
+        self.categoriesTableView.delegate = self
+        self.categoriesTableView.registerCellNib(CategoryCell.self)
         
         self.startButton.setTitle(CategoriesLocalization.startTitle.localized, for: [])
     }
@@ -88,6 +99,17 @@ class CategoriesViewController: ViperViewController, CategoriesViewInput {
         
         self.setupComponents()
         self.setupActions()
+    }
+    
+    func updateForSections(_ sections: [TableSectionModel]) {
+        self.sections = sections
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.categoriesTableView.reloadData()
+            strongSelf.categoriesTableView.spruce.animate([.slide(.up, .severely), .fadeIn], animationType: SpringAnimation(duration: 0.7), sortFunction: LinearSortFunction(direction: .bottomToTop, interObjectDelay: 0.05))
+        }
     }
     
 }
@@ -133,3 +155,76 @@ extension CategoriesViewController {
 
 // MARK: - Module functions
 extension CategoriesViewController { }
+
+// MARK: - UITableViewDataSource
+extension CategoriesViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.sections.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.sections[section].rows.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = self.sections[indexPath.section].rows[indexPath.row]
+        
+        if model is CategoryCellModel {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier) as? CategoryCell else { return UITableViewCell() }
+            cell.model = model
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+}
+
+// MARK: - UITableViewDelegate
+extension CategoriesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let model = self.sections[indexPath.section].rows[indexPath.row]
+        
+        return model.cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        guard let selectedModel = self.sections[indexPath.section].rows[indexPath.row] as? DiaryWorkoutCellModel else { return }
+//        guard let selectedId = selectedModel.userInfo["workoutId"] as? String else { return }
+//        let models = self.sections[indexPath.section].rows
+//
+//        for model in models {
+//            guard let diaryWorkoutModel = model as? DiaryWorkoutCellModel else { continue }
+//            guard let diaryWorkoutId = diaryWorkoutModel.userInfo["workoutId"] as? String else { return }
+//
+//            if diaryWorkoutId == selectedId {
+//                diaryWorkoutModel.expanded.toggle()
+//            } else {
+//                diaryWorkoutModel.expanded = false
+//            }
+//        }
+//
+//        DispatchQueue.main.async { [weak self] in
+//            guard let strongSelf = self else { return }
+//
+//            if selectedModel.expanded && strongSelf.calendarView.scope == .month {
+//                strongSelf.calendarView.setScope(.week, animated: true)
+//            }
+//
+//            strongSelf.tableView.beginUpdates()
+//            strongSelf.tableView.endUpdates()
+//            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+//        }
+    }
+    
+}

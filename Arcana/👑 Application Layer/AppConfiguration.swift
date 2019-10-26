@@ -11,11 +11,15 @@ import Foundation
 enum AppConfiguration {
     
     static var databaseContainerName: String {
-        return "Arcana"
+        return "Riddler"
     }
     
     static var serverUrl: String {
-        return ""
+        return "http://192.168.30.39:8000"
+    }
+    
+    static var serverApi: String {
+        return AppConfiguration.serverUrl + "/api"
     }
     
 }

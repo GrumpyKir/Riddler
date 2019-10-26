@@ -36,7 +36,7 @@
 "MAIN_TITLE"            = "";
 "MAIN_PROGRESS_TITLE"   = "Уровень %@";
 "MAIN_PROGRESS_HINT"    = "До открытия следующей категории осталось %@ баллов";
-"MAIN_START_TITLE"      = "Начать";
+"MAIN_START_TITLE"      = "Играть";
 "MAIN_SETTINGS_TITLE"   = "";
 "MAIN_HELP_TITLE"       = "?";
 

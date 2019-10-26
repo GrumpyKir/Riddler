@@ -63,8 +63,8 @@
                         <constraint firstItem="hhd-1Z-VoN" firstAttribute="centerX" secondItem="u4V-it-dZQ" secondAttribute="centerX" id="xxZ-Fv-zTl"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edp-Wh-bWv">
-                    <rect key="frame" x="47" y="179" width="281" height="84"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="edp-Wh-bWv">
+                    <rect key="frame" x="47" y="263" width="281" height="141"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="edp-Wh-bWv" secondAttribute="height" multiplier="2:1" id="a3V-OZ-C1q"/>
                     </constraints>
