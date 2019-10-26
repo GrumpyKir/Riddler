@@ -32,4 +32,8 @@ enum AppAssets {
     static var backIcon: UIImage? {
         return UIImage(named: "BackIcon")
     }
+    
+    static var closeIcon: UIImage? {
+        return UIImage(named: "CloseIcon")
+    }
 }

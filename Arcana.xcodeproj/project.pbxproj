@@ -32,6 +32,22 @@
 		ED213EF12364939F00A56E1C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EF02364939F00A56E1C /* CategoryCell.swift */; };
 		ED213EF3236493AA00A56E1C /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED213EF2236493AA00A56E1C /* CategoryCell.xib */; };
 		ED213EF5236493B400A56E1C /* CategoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EF4236493B400A56E1C /* CategoryCellModel.swift */; };
+		ED213EFE23649E8A00A56E1C /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EF723649E8A00A56E1C /* GameViewModel.swift */; };
+		ED213EFF23649E8A00A56E1C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EF823649E8A00A56E1C /* GameViewController.swift */; };
+		ED213F0023649E8A00A56E1C /* GameAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EF923649E8A00A56E1C /* GameAssembly.swift */; };
+		ED213F0123649E8A00A56E1C /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EFA23649E8A00A56E1C /* GameInteractor.swift */; };
+		ED213F0223649E8A00A56E1C /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EFB23649E8A00A56E1C /* GameRouter.swift */; };
+		ED213F0323649E8A00A56E1C /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED213EFC23649E8A00A56E1C /* GameViewController.xib */; };
+		ED213F0423649E8A00A56E1C /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EFD23649E8A00A56E1C /* GamePresenter.swift */; };
+		ED213F0723649EA100A56E1C /* GameLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F0623649EA100A56E1C /* GameLocalization.swift */; };
+		ED213F0923649EAB00A56E1C /* StyleWrapper+Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F0823649EAB00A56E1C /* StyleWrapper+Game.swift */; };
+		ED213F0C2364A98300A56E1C /* QuestionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F0B2364A98300A56E1C /* QuestionsRepository.swift */; };
+		ED213F0E2364A98F00A56E1C /* QuestionsRemoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F0D2364A98F00A56E1C /* QuestionsRemoteRouter.swift */; };
+		ED213F112364A9A400A56E1C /* QuestionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F102364A9A400A56E1C /* QuestionResponse.swift */; };
+		ED213F132364A9B900A56E1C /* QuestionComplexResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F122364A9B900A56E1C /* QuestionComplexResponse.swift */; };
+		ED213F162364AB1B00A56E1C /* QuestionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F152364AB1B00A56E1C /* QuestionsUseCase.swift */; };
+		ED213F192364AB2F00A56E1C /* QuestionComplexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F182364AB2F00A56E1C /* QuestionComplexModel.swift */; };
+		ED213F1B2364AB3800A56E1C /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213F1A2364AB3800A56E1C /* QuestionModel.swift */; };
 		ED4BA8792364326300A6D4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BA8782364326300A6D4BF /* AppDelegate.swift */; };
 		ED4BA8822364326600A6D4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4BA8812364326600A6D4BF /* Assets.xcassets */; };
 		ED4BA8852364326600A6D4BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4BA8832364326600A6D4BF /* LaunchScreen.storyboard */; };
@@ -95,6 +111,22 @@
 		ED213EF02364939F00A56E1C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		ED213EF2236493AA00A56E1C /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		ED213EF4236493B400A56E1C /* CategoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellModel.swift; sourceTree = "<group>"; };
+		ED213EF723649E8A00A56E1C /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		ED213EF823649E8A00A56E1C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ED213EF923649E8A00A56E1C /* GameAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssembly.swift; sourceTree = "<group>"; };
+		ED213EFA23649E8A00A56E1C /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		ED213EFB23649E8A00A56E1C /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
+		ED213EFC23649E8A00A56E1C /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		ED213EFD23649E8A00A56E1C /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		ED213F0623649EA100A56E1C /* GameLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocalization.swift; sourceTree = "<group>"; };
+		ED213F0823649EAB00A56E1C /* StyleWrapper+Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleWrapper+Game.swift"; sourceTree = "<group>"; };
+		ED213F0B2364A98300A56E1C /* QuestionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRepository.swift; sourceTree = "<group>"; };
+		ED213F0D2364A98F00A56E1C /* QuestionsRemoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRemoteRouter.swift; sourceTree = "<group>"; };
+		ED213F102364A9A400A56E1C /* QuestionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResponse.swift; sourceTree = "<group>"; };
+		ED213F122364A9B900A56E1C /* QuestionComplexResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionComplexResponse.swift; sourceTree = "<group>"; };
+		ED213F152364AB1B00A56E1C /* QuestionsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsUseCase.swift; sourceTree = "<group>"; };
+		ED213F182364AB2F00A56E1C /* QuestionComplexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionComplexModel.swift; sourceTree = "<group>"; };
+		ED213F1A2364AB3800A56E1C /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		ED4BA8752364326300A6D4BF /* Riddler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riddler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4BA8782364326300A6D4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4BA8812364326600A6D4BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -243,6 +275,67 @@
 			path = CategoryCell;
 			sourceTree = "<group>";
 		};
+		ED213EF623649E7C00A56E1C /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				ED213EF923649E8A00A56E1C /* GameAssembly.swift */,
+				ED213EFA23649E8A00A56E1C /* GameInteractor.swift */,
+				ED213EFD23649E8A00A56E1C /* GamePresenter.swift */,
+				ED213EFB23649E8A00A56E1C /* GameRouter.swift */,
+				ED213EF823649E8A00A56E1C /* GameViewController.swift */,
+				ED213EFC23649E8A00A56E1C /* GameViewController.xib */,
+				ED213EF723649E8A00A56E1C /* GameViewModel.swift */,
+				ED213F0523649E9100A56E1C /* Resources */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		ED213F0523649E9100A56E1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED213F0623649EA100A56E1C /* GameLocalization.swift */,
+				ED213F0823649EAB00A56E1C /* StyleWrapper+Game.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED213F0A2364A96200A56E1C /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				ED213F0B2364A98300A56E1C /* QuestionsRepository.swift */,
+				ED213F0D2364A98F00A56E1C /* QuestionsRemoteRouter.swift */,
+				ED213F0F2364A99200A56E1C /* Models */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		ED213F0F2364A99200A56E1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED213F122364A9B900A56E1C /* QuestionComplexResponse.swift */,
+				ED213F102364A9A400A56E1C /* QuestionResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED213F142364AB0D00A56E1C /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				ED213F152364AB1B00A56E1C /* QuestionsUseCase.swift */,
+				ED213F172364AB1F00A56E1C /* Models */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		ED213F172364AB1F00A56E1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED213F182364AB2F00A56E1C /* QuestionComplexModel.swift */,
+				ED213F1A2364AB3800A56E1C /* QuestionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		ED4BA86C2364326300A6D4BF = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +387,7 @@
 				ED213EDE23648D2300A56E1C /* Riddler.xcdatamodeld */,
 				ED213EDC23648D0300A56E1C /* RiddlerRepository.swift */,
 				ED213EE123648D2700A56E1C /* Categories */,
+				ED213F0A2364A96200A56E1C /* Questions */,
 			);
 			path = "🧠 Data Layer";
 			sourceTree = "<group>";
@@ -301,6 +395,7 @@
 		ED4BA88E236433F100A6D4BF /* 🧩 Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
+				ED213F142364AB0D00A56E1C /* Questions */,
 				ED213EE723648DD000A56E1C /* Categories */,
 			);
 			path = "🧩 Domain Layer";
@@ -399,9 +494,10 @@
 		ED5E8A9923643B02004F8CE6 /* User Stories */ = {
 			isa = PBXGroup;
 			children = (
+				ED213EF623649E7C00A56E1C /* Game */,
 				ED213EBF2364501F00A56E1C /* Categories */,
-				ED5E8AA523643D65004F8CE6 /* Main */,
 				ED5E8AA423643D56004F8CE6 /* Initial */,
+				ED5E8AA523643D65004F8CE6 /* Main */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -553,6 +649,7 @@
 				ED4BA897236435BC00A6D4BF /* Localizable.strings in Resources */,
 				ED213ED8236473B900A56E1C /* FiraSans-ExtraBold.ttf in Resources */,
 				ED213ECC2364506900A56E1C /* CategoriesViewController.xib in Resources */,
+				ED213F0323649E8A00A56E1C /* GameViewController.xib in Resources */,
 				ED213EF3236493AA00A56E1C /* CategoryCell.xib in Resources */,
 				ED5E8AC923643E78004F8CE6 /* MainViewController.xib in Resources */,
 				ED4BA8822364326600A6D4BF /* Assets.xcassets in Resources */,
@@ -628,42 +725,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED213F0123649E8A00A56E1C /* GameInteractor.swift in Sources */,
 				ED213EBE2364460A00A56E1C /* UISpringTimingParameters+Initialization.swift in Sources */,
 				ED5E8A9E23643B6E004F8CE6 /* BasicNavigationController.swift in Sources */,
 				ED5E8AC523643E78004F8CE6 /* MainViewController.swift in Sources */,
 				ED213EE923648DDE00A56E1C /* CategoriesUseCase.swift in Sources */,
 				ED5E8AAF23643D79004F8CE6 /* InitialAssembly.swift in Sources */,
 				ED5E8AAE23643D79004F8CE6 /* InitialViewController.swift in Sources */,
+				ED213F0C2364A98300A56E1C /* QuestionsRepository.swift in Sources */,
 				ED5E8AA123643C6D004F8CE6 /* AppTheme.swift in Sources */,
 				ED5E8AB723643DB6004F8CE6 /* StylyWrapper+Initial.swift in Sources */,
 				ED5E8AB523643D91004F8CE6 /* InitialLocalization.swift in Sources */,
+				ED213F1B2364AB3800A56E1C /* QuestionModel.swift in Sources */,
 				ED213EDB236473CA00A56E1C /* FiraSans.swift in Sources */,
 				ED213EF5236493B400A56E1C /* CategoryCellModel.swift in Sources */,
 				ED4BA89F2364362B00A6D4BF /* AppConfiguration.swift in Sources */,
 				ED213EE023648D2300A56E1C /* Riddler.xcdatamodeld in Sources */,
 				ED213EEE23648E0200A56E1C /* CategoryResponse.swift in Sources */,
 				ED5E8AB323643D79004F8CE6 /* InitialPresenter.swift in Sources */,
+				ED213F0023649E8A00A56E1C /* GameAssembly.swift in Sources */,
 				ED5E8A9423643A20004F8CE6 /* Stylable.swift in Sources */,
+				ED213F0223649E8A00A56E1C /* GameRouter.swift in Sources */,
+				ED213F112364A9A400A56E1C /* QuestionResponse.swift in Sources */,
 				ED4BA89D2364361200A6D4BF /* AppLocalization.swift in Sources */,
 				ED213ED22364508800A56E1C /* StyleWrapper+Categories.swift in Sources */,
 				ED5E8AB023643D79004F8CE6 /* InitialInteractor.swift in Sources */,
 				ED213EC82364506900A56E1C /* CategoriesViewController.swift in Sources */,
 				ED4BA8A1236436A700A6D4BF /* Localizable.swift in Sources */,
 				ED213EE423648D5600A56E1C /* CategoriesRepository.swift in Sources */,
+				ED213F0E2364A98F00A56E1C /* QuestionsRemoteRouter.swift in Sources */,
 				ED5E8ACE23643EA9004F8CE6 /* MainLocalization.swift in Sources */,
 				ED4BA8792364326300A6D4BF /* AppDelegate.swift in Sources */,
 				ED213EF12364939F00A56E1C /* CategoryCell.swift in Sources */,
 				ED5E8AB123643D79004F8CE6 /* InitialRouter.swift in Sources */,
 				ED213EE623648D7100A56E1C /* CategoriesRemoteRouter.swift in Sources */,
 				ED213ED02364507C00A56E1C /* CategoriesLocalization.swift in Sources */,
+				ED213EFF23649E8A00A56E1C /* GameViewController.swift in Sources */,
 				ED5E8AD023643EBE004F8CE6 /* StyleWrapper+Main.swift in Sources */,
 				ED213ECD2364506900A56E1C /* CategoriesPresenter.swift in Sources */,
+				ED213F0723649EA100A56E1C /* GameLocalization.swift in Sources */,
 				ED5E8AC823643E78004F8CE6 /* MainRouter.swift in Sources */,
 				ED5E8AC423643E78004F8CE6 /* MainViewModel.swift in Sources */,
 				ED213EDD23648D0300A56E1C /* RiddlerRepository.swift in Sources */,
+				ED213F192364AB2F00A56E1C /* QuestionComplexModel.swift in Sources */,
 				ED5E8AA323643C88004F8CE6 /* AppThemeManager.swift in Sources */,
 				ED213EEC23648DEF00A56E1C /* CategoryModel.swift in Sources */,
 				ED5E8A9623643A2B004F8CE6 /* StyleWrapper.swift in Sources */,
+				ED213EFE23649E8A00A56E1C /* GameViewModel.swift in Sources */,
+				ED213F162364AB1B00A56E1C /* QuestionsUseCase.swift in Sources */,
 				ED213EC72364506900A56E1C /* CategoriesViewModel.swift in Sources */,
 				ED5E8ACA23643E78004F8CE6 /* MainPresenter.swift in Sources */,
 				ED213EC92364506900A56E1C /* CategoriesAssembly.swift in Sources */,
@@ -674,7 +783,10 @@
 				ED5E8A902364390C004F8CE6 /* AppAssets.swift in Sources */,
 				ED5E8AC623643E78004F8CE6 /* MainAssembly.swift in Sources */,
 				ED213ECB2364506900A56E1C /* CategoriesRouter.swift in Sources */,
+				ED213F0423649E8A00A56E1C /* GamePresenter.swift in Sources */,
 				ED5E8AC723643E78004F8CE6 /* MainInteractor.swift in Sources */,
+				ED213F0923649EAB00A56E1C /* StyleWrapper+Game.swift in Sources */,
+				ED213F132364A9B900A56E1C /* QuestionComplexResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

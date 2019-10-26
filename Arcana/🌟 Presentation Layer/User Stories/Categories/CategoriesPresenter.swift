@@ -60,7 +60,12 @@ class CategoriesPresenter: ViperPresenter, CategoriesPresenterInput, CategoriesV
     }
     
     func startGame() {
-        self.view?.show(title: nil, message: "\(self.viewModel.selectedCategories)", animated: true)
+        if self.viewModel.selectedCategories.isEmpty {
+            self.view?.show(title: nil, message: "Выберите хотя бы одну категорию", animated: true)
+        } else {
+            let stringArray = self.viewModel.selectedCategories.map( { String($0) } )
+            self.router?.presentGameComtroller(categories: stringArray.joined(separator: ","))
+        }
     }
     
     // MARK: - CategoriesInteractorOutput
