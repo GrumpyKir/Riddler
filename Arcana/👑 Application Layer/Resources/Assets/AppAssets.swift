@@ -21,4 +21,11 @@ enum AppAssets {
     static var wipLogo: UIImage? {
         return UIImage(named: "AppWip")
     }
+    
+    static var helpIcon: UIImage? {
+        return UIImage(named: "HelpIcon")
+    }
+    static var settingsIcon: UIImage? {
+        return UIImage(named: "SettingsIcon")
+    }
 }

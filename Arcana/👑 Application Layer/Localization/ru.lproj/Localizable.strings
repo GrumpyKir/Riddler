@@ -8,34 +8,39 @@
 
 // MARK: - Common
 "OK"            = "OK";
-"SAVE"          = "Save";
-"CANCEL"        = "Cancel";
-"CLOSE"         = "Close";
-"ATTENSION"     = "Attention!";
-"UNKNOWN"       = "Unknown";
-"LOADING"       = "Loading";
-"REFRESH"       = "Refresh";
-"TRY_AGAIN"     = "Try Again";
-"YES"           = "Yes";
-"NO"            = "No";
-"ERROR"         = "Error";
-"WARNING"       = "Warning";
-"CONTINUE"      = "Continue";
-"SEARCH"        = "Search";
-"NEXT"          = "Next";
+"SAVE"          = "Сохранить";
+"CANCEL"        = "Отмена";
+"CLOSE"         = "Закрыть";
+"ATTENSION"     = "Внимание!";
+"UNKNOWN"       = "Неизвестно";
+"LOADING"       = "Загрузка";
+"REFRESH"       = "Обновить";
+"TRY_AGAIN"     = "Попробовать еще";
+"YES"           = "Да";
+"NO"            = "Нет";
+"ERROR"         = "Ошибка";
+"WARNING"       = "Предупреждение";
+"CONTINUE"      = "Продолжить";
+"SEARCH"        = "Поиск";
+"NEXT"          = "Далее";
 
 // MARK: - Themes and languages
-"APP_THEME_LIGHT"   = "Light";
-"APP_LANG_ENG"      = "English";
-"APP_LANG_RUS"      = "Russian";
+"APP_THEME_DARK"    = "Темная";
+"APP_LANG_ENG"      = "Английский";
+"APP_LANG_RUS"      = "Русский";
 
 // MARK: - Initial
 "INITIAL_TITLE" = "";
 
 // MARK: - Main
-"MAIN_TITLE"        = "";
-"MAIN_START_TITLE"  = "Start";
-"MAIN_HELP_TITLE"   = "?";
+"MAIN_TITLE"            = "";
+"MAIN_PROGRESS_TITLE"   = "Уровень %@";
+"MAIN_PROGRESS_HINT"    = "До открытия следующей категории осталось %@ баллов";
+"MAIN_START_TITLE"      = "Начать";
+"MAIN_SETTINGS_TITLE"   = "";
+"MAIN_HELP_TITLE"       = "?";
 
 //MARK: - Categories
 "CATEGORIES_TITLE"  = "";
+"CATEGORIES_START_TITLE"  = "Начать";
+"CATEGORIES_CLOSE_TITLE"  = "Назад";

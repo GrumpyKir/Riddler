@@ -57,6 +57,10 @@ class MainViewController: ViperViewController, MainViewInput {
                 
         self.backgroundImageView.image = AppAssets.appBackground
         self.logoImageView.image = AppAssets.appLogo
+        
+        self.progressTitleLabel.text = String(format: MainLocalization.progressTitle.localized, "\(1)")
+        self.progressView.progress = 0.65
+        self.progressHintLabel.text = String(format: MainLocalization.progressHint.localized, "\(30)")
     }
     
     func setupActions() {
@@ -72,8 +76,11 @@ class MainViewController: ViperViewController, MainViewInput {
         self.logoImageView.apply(.generalFillStyle())
         
         self.progressBackgroundView.apply(.backgroundClearStyle())
+        self.progressTitleLabel.apply(.progressTitleStyle())
+        self.progressView.apply(.progressStyle())
+        self.progressHintLabel.apply(.progressHintStyle())
         
-        self.startButton.apply(.categoriesButtonStyle())
+        self.startButton.apply(.playButtonStyle())
         self.settingsButton.apply(.settingsButtonStyle())
         self.helpButton.apply(.helpButtonStyle())
     }
@@ -113,32 +120,29 @@ extension MainViewController {
     
     private func prepareStartupAnimation() {
         self.logoImageView.transform = .identity
+        self.progressBackgroundView.alpha = 0.0
         self.startButton.alpha = 0.0
-        self.startButton.isEnabled = false
         self.helpButton.alpha = 0.0
-        self.helpButton.isEnabled = false
         self.settingsButton.alpha = 0.0
-        self.settingsButton.isEnabled = false
     }
     
     private func startupAnimation() {
         self.prepareStartupAnimation()
         
-        let timingParameters = UISpringTimingParameters(damping: 0.5, response: 1.0)
+        let timingParameters = UISpringTimingParameters(damping: 0.75, response: 1.0)
         let startupAnimator: UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 0.0, timingParameters: timingParameters)
         
         startupAnimator.addAnimations {
             let verticalTransition = self.view.bounds.height * 0.25
             self.logoImageView.transform = CGAffineTransform(translationX: 0.0, y: -verticalTransition)
+            self.progressBackgroundView.alpha = 1.0
             self.startButton.alpha = 1.0
             self.helpButton.alpha = 1.0
             self.settingsButton.alpha = 1.0
         }
         
         startupAnimator.addCompletion { _ in
-            self.startButton.isEnabled = true
-            self.helpButton.isEnabled = true
-            self.settingsButton.isEnabled = true
+            //
         }
         
         startupAnimator.startAnimation()

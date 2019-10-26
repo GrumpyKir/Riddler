@@ -21,10 +21,11 @@ enum AppTheme {
     
     // MARK: - Window background color
     /// hex F0F0F0
-    public static var backgroundMain: UIColor {
+    public static var backgroundMain: [UIColor] {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "F0F0F0", alpha: 1.0)
+            return [UIColor(hex: "283D5B", alpha: 1.0),
+                    UIColor(hex: "081426", alpha: 1.0)]
         }
     }
     
@@ -32,7 +33,14 @@ enum AppTheme {
     public static var backgroundContent: UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "FFFFFF", alpha: 1.0)
+            return UIColor(hex: "101E34", alpha: 1.0)
+        }
+    }
+    
+    public static var backgroundControl: UIColor {
+        switch AppThemeManager.current.type {
+        case .dark:
+            return UIColor(hex: "1A2F51", alpha: 1.0)
         }
     }
     
@@ -40,32 +48,23 @@ enum AppTheme {
     public static var backgroundShadow: UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "989AA6", alpha: 1.0)
+            return UIColor(hex: "101E34", alpha: 1.0)
         }
     }
 
     // MARK: - Accent colors of the app
-    /// hex 33333A
-    public static var accentBackground: UIColor {
-        switch AppThemeManager.current.type {
-        case .dark:
-            return UIColor(hex: "33333A", alpha: 1.0)
-        }
-    }
-    
-    public static var accentBackgroundGradient: [UIColor] {
-        switch AppThemeManager.current.type {
-        case .dark:
-            return [UIColor(hex: "212126", alpha: 1.0),
-                    UIColor(hex: "424249", alpha: 1.0),
-                    UIColor(hex: "76767D", alpha: 1.0)]
-        }
-    }
-    
     public static var accentMain: UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "FF5E2C", alpha: 1.0)
+            return UIColor(hex: "04E785", alpha: 1.0)
+        }
+    }
+    
+    public static var accentGradient: [UIColor] {
+        switch AppThemeManager.current.type {
+        case .dark:
+            return [UIColor(hex: "00FF91", alpha: 1.0),
+                    UIColor(hex: "0BB46B", alpha: 1.0)]
         }
     }
 
@@ -73,7 +72,7 @@ enum AppTheme {
     public static var accentTextMain: UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "FFFFFF", alpha: 1.0)
+            return UIColor(hex: "101E34", alpha: 1.0)
         }
     }
     
@@ -88,14 +87,14 @@ enum AppTheme {
     public static var textMain: UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "424249", alpha: 1.0)
+            return UIColor(hex: "FFFFFF", alpha: 1.0)
         }
     }
-
+    
     public static var textSub: UIColor {
         switch AppThemeManager.current.type {
         case .dark:
-            return UIColor(hex: "B4B4B6", alpha: 1.0)
+            return UIColor(hex: "6E8EC1", alpha: 1.0)
         }
     }
     

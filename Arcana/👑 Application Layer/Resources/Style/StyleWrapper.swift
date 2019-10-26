@@ -19,7 +19,7 @@ extension StyleWrapper where Element: UIView {
     
     static func backgroundViewStyle() -> StyleWrapper {
         return .wrap { view in
-            view.backgroundColor = AppTheme.backgroundMain
+            view.backgroundColor = GradientColor(.topToBottom, frame: view.bounds, colors: AppTheme.backgroundMain)
         }
     }
     

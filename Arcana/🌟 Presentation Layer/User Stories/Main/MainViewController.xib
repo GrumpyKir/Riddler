@@ -34,16 +34,19 @@
                     <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4V-it-dZQ">
-                            <rect key="frame" x="8" y="0.0" width="359" height="21"/>
+                            <rect key="frame" x="80" y="52.5" width="215" height="20"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="juV-2t-vsQ">
-                            <rect key="frame" x="80" y="37" width="215" height="2"/>
+                            <rect key="frame" x="80" y="88.5" width="215" height="6"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="6" id="bF0-du-XDR"/>
+                            </constraints>
                         </progressView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress Hint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhd-1Z-VoN">
-                            <rect key="frame" x="8" y="55" width="359" height="21"/>
+                            <rect key="frame" x="80" y="110.5" width="215" height="20"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -51,15 +54,12 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="u4V-it-dZQ" firstAttribute="leading" secondItem="eZd-IU-nI6" secondAttribute="leading" constant="8" id="5tv-fM-V05"/>
-                        <constraint firstItem="hhd-1Z-VoN" firstAttribute="leading" secondItem="eZd-IU-nI6" secondAttribute="leading" constant="8" id="7zb-7g-0UD"/>
                         <constraint firstItem="juV-2t-vsQ" firstAttribute="top" secondItem="u4V-it-dZQ" secondAttribute="bottom" constant="16" id="Dda-op-Svf"/>
-                        <constraint firstAttribute="trailing" secondItem="u4V-it-dZQ" secondAttribute="trailing" constant="8" id="EeW-3w-2jX"/>
+                        <constraint firstItem="hhd-1Z-VoN" firstAttribute="width" secondItem="juV-2t-vsQ" secondAttribute="width" id="NeH-lW-M9T"/>
                         <constraint firstItem="juV-2t-vsQ" firstAttribute="centerX" secondItem="u4V-it-dZQ" secondAttribute="centerX" id="gy2-Rj-VBz"/>
                         <constraint firstItem="hhd-1Z-VoN" firstAttribute="top" secondItem="juV-2t-vsQ" secondAttribute="bottom" constant="16" id="iop-mt-GbA"/>
+                        <constraint firstItem="u4V-it-dZQ" firstAttribute="width" secondItem="juV-2t-vsQ" secondAttribute="width" id="l7p-8u-qeP"/>
                         <constraint firstItem="u4V-it-dZQ" firstAttribute="centerX" secondItem="eZd-IU-nI6" secondAttribute="centerX" id="mDb-7h-itM"/>
-                        <constraint firstItem="u4V-it-dZQ" firstAttribute="top" secondItem="eZd-IU-nI6" secondAttribute="top" id="naR-EE-Lpi"/>
-                        <constraint firstAttribute="trailing" secondItem="hhd-1Z-VoN" secondAttribute="trailing" constant="8" id="suK-UO-q9r"/>
                         <constraint firstItem="hhd-1Z-VoN" firstAttribute="centerX" secondItem="u4V-it-dZQ" secondAttribute="centerX" id="xxZ-Fv-zTl"/>
                     </constraints>
                 </view>
@@ -114,6 +114,7 @@
                 <constraint firstItem="juV-2t-vsQ" firstAttribute="width" secondItem="U1H-Ta-ISI" secondAttribute="width" id="bdo-jz-Qnh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iLv-Ac-cdR" secondAttribute="trailing" constant="16" id="iBH-So-dyw"/>
                 <constraint firstItem="gBh-07-JoJ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="iXj-Eq-qc2"/>
+                <constraint firstItem="U1H-Ta-ISI" firstAttribute="top" secondItem="hhd-1Z-VoN" secondAttribute="bottom" constant="79" id="oqm-2R-EFC"/>
                 <constraint firstItem="eZd-IU-nI6" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="rWx-WC-Ach"/>
                 <constraint firstItem="eZd-IU-nI6" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="rYD-Kf-T6X"/>
                 <constraint firstItem="iLv-Ac-cdR" firstAttribute="centerY" secondItem="U1H-Ta-ISI" secondAttribute="centerY" id="seD-F6-bZV"/>

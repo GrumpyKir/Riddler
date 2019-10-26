@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 extension StyleWrapper where Element: UIView {
     
     static func categoriesBackgroundStyle() -> StyleWrapper {
         return .wrap { view in
-            view.backgroundColor = AppTheme.backgroundMain
+            view.backgroundColor = GradientColor(.topToBottom, frame: view.bounds, colors: AppTheme.backgroundMain)
             view.alpha = 0.5
         }
     }

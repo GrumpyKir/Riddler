@@ -25,7 +25,7 @@
 "NEXT"          = "Next";
 
 // MARK: - Themes and languages
-"APP_THEME_DARK"   = "Dark";
+"APP_THEME_DARK"    = "Dark";
 "APP_LANG_ENG"      = "English";
 "APP_LANG_RUS"      = "Russian";
 
@@ -34,11 +34,11 @@
 
 // MARK: - Main
 "MAIN_TITLE"            = "";
-"MAIN_START_TITLE"      = "Start";
+"MAIN_START_TITLE"      = "Play";
 "MAIN_SETTINGS_TITLE"   = "";
 "MAIN_HELP_TITLE"       = "?";
 
 //MARK: - Categories
 "CATEGORIES_TITLE"  = "";
 "CATEGORIES_START_TITLE"  = "Start";
-"CATEGORIES_CLOSE_TITLE"  = "Close";
+"CATEGORIES_CLOSE_TITLE"  = "Back";

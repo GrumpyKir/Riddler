@@ -18,6 +18,10 @@
 		ED213ECD2364506900A56E1C /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EC62364506900A56E1C /* CategoriesPresenter.swift */; };
 		ED213ED02364507C00A56E1C /* CategoriesLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213ECF2364507C00A56E1C /* CategoriesLocalization.swift */; };
 		ED213ED22364508800A56E1C /* StylyWrapper+Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */; };
+		ED213ED7236473B900A56E1C /* FiraSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED213ED4236473B900A56E1C /* FiraSans-SemiBold.ttf */; };
+		ED213ED8236473B900A56E1C /* FiraSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED213ED5236473B900A56E1C /* FiraSans-ExtraBold.ttf */; };
+		ED213ED9236473B900A56E1C /* FiraSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED213ED6236473B900A56E1C /* FiraSans-Regular.ttf */; };
+		ED213EDB236473CA00A56E1C /* FiraSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EDA236473CA00A56E1C /* FiraSans.swift */; };
 		ED4BA8792364326300A6D4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BA8782364326300A6D4BF /* AppDelegate.swift */; };
 		ED4BA8822364326600A6D4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4BA8812364326600A6D4BF /* Assets.xcassets */; };
 		ED4BA8852364326600A6D4BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4BA8832364326600A6D4BF /* LaunchScreen.storyboard */; };
@@ -67,6 +71,10 @@
 		ED213EC62364506900A56E1C /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
 		ED213ECF2364507C00A56E1C /* CategoriesLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLocalization.swift; sourceTree = "<group>"; };
 		ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StylyWrapper+Categories.swift"; sourceTree = "<group>"; };
+		ED213ED4236473B900A56E1C /* FiraSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		ED213ED5236473B900A56E1C /* FiraSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		ED213ED6236473B900A56E1C /* FiraSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Regular.ttf"; sourceTree = "<group>"; };
+		ED213EDA236473CA00A56E1C /* FiraSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiraSans.swift; sourceTree = "<group>"; };
 		ED4BA8752364326300A6D4BF /* Riddler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riddler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4BA8782364326300A6D4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4BA8812364326600A6D4BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -157,6 +165,17 @@
 				ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED213ED32364739F00A56E1C /* Fira Sans */ = {
+			isa = PBXGroup;
+			children = (
+				ED213ED5236473B900A56E1C /* FiraSans-ExtraBold.ttf */,
+				ED213ED6236473B900A56E1C /* FiraSans-Regular.ttf */,
+				ED213ED4236473B900A56E1C /* FiraSans-SemiBold.ttf */,
+				ED213EDA236473CA00A56E1C /* FiraSans.swift */,
+			);
+			path = "Fira Sans";
 			sourceTree = "<group>";
 		};
 		ED4BA86C2364326300A6D4BF = {
@@ -277,6 +296,7 @@
 		ED5E8A91236439F0004F8CE6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				ED213ED32364739F00A56E1C /* Fira Sans */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -459,11 +479,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4BA8852364326600A6D4BF /* LaunchScreen.storyboard in Resources */,
+				ED213ED7236473B900A56E1C /* FiraSans-SemiBold.ttf in Resources */,
 				ED4BA897236435BC00A6D4BF /* Localizable.strings in Resources */,
+				ED213ED8236473B900A56E1C /* FiraSans-ExtraBold.ttf in Resources */,
 				ED213ECC2364506900A56E1C /* CategoriesViewController.xib in Resources */,
 				ED5E8AC923643E78004F8CE6 /* MainViewController.xib in Resources */,
 				ED4BA8822364326600A6D4BF /* Assets.xcassets in Resources */,
 				ED5E8AB223643D79004F8CE6 /* InitialViewController.xib in Resources */,
+				ED213ED9236473B900A56E1C /* FiraSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +565,7 @@
 				ED5E8AA123643C6D004F8CE6 /* AppTheme.swift in Sources */,
 				ED5E8AB723643DB6004F8CE6 /* StylyWrapper+Initial.swift in Sources */,
 				ED5E8AB523643D91004F8CE6 /* InitialLocalization.swift in Sources */,
+				ED213EDB236473CA00A56E1C /* FiraSans.swift in Sources */,
 				ED4BA89F2364362B00A6D4BF /* AppConfiguration.swift in Sources */,
 				ED5E8AB323643D79004F8CE6 /* InitialPresenter.swift in Sources */,
 				ED5E8A9423643A20004F8CE6 /* Stylable.swift in Sources */,
