@@ -10,13 +10,23 @@ import GKViper
 
 protocol MainViewInput: ViperViewInput { }
 
-protocol MainViewOutput: ViperViewOutput { }
+protocol MainViewOutput: ViperViewOutput {
+    func goToCategories()
+}
 
 class MainViewController: ViperViewController, MainViewInput {
 
     // MARK: - Outlets
+    @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var logoImageView: UIImageView!
+    
+    @IBOutlet private weak var progressBackgroundView: UIView!
+    @IBOutlet private weak var progressTitleLabel: UILabel!
+    @IBOutlet private weak var progressView: UIProgressView!
+    @IBOutlet private weak var progressHintLabel: UILabel!
+    
     @IBOutlet private weak var startButton: UIButton!
+    @IBOutlet private weak var settingsButton: UIButton!
     @IBOutlet private weak var helpButton: UIButton!
     
     // MARK: - Props
@@ -26,8 +36,18 @@ class MainViewController: ViperViewController, MainViewInput {
     }
     
     // MARK: - Lifecycle
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLayoutSubviews() {
         self.applyStyles()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.startupAnimation()
     }
     
     // MARK: - Setup functions
@@ -35,19 +55,26 @@ class MainViewController: ViperViewController, MainViewInput {
         self.navigationItem.title = MainLocalization.navigationTitle.localized
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
                 
-        self.logoImageView.image = AppAssets.wipLogo
-        self.startButton.setTitle(MainLocalization.startButtonTitle.localized, for: [])
-        self.helpButton.setTitle(MainLocalization.helpButtonTitle.localized, for: [])
-        
-        self.startupAnimation()
+        self.backgroundImageView.image = AppAssets.appBackground
+        self.logoImageView.image = AppAssets.appLogo
     }
     
-    func setupActions() { }
+    func setupActions() {
+        self.startButton.addTarget(self, action: #selector(self.startButtonTapped(_:)), for: .touchUpInside)
+        self.settingsButton.addTarget(self, action: #selector(self.settingsButtonTapped(_:)), for: .touchUpInside)
+        self.helpButton.addTarget(self, action: #selector(self.helpButtonTapped(_:)), for: .touchUpInside)
+    }
     
     func applyStyles() {
         self.view.apply(.backgroundViewStyle())
-        self.logoImageView.apply(.generalStyle())
-        self.startButton.apply(.startButtonStyle())
+        self.backgroundImageView.apply(.generalFillStyle())
+        
+        self.logoImageView.apply(.generalFillStyle())
+        
+        self.progressBackgroundView.apply(.backgroundClearStyle())
+        
+        self.startButton.apply(.categoriesButtonStyle())
+        self.settingsButton.apply(.settingsButtonStyle())
         self.helpButton.apply(.helpButtonStyle())
     }
     
@@ -62,7 +89,24 @@ class MainViewController: ViperViewController, MainViewInput {
 }
 
 // MARK: - Actions
-extension MainViewController { }
+extension MainViewController {
+    
+    @objc
+    private func startButtonTapped(_ sender: UIButton) {
+        self.output?.goToCategories()
+    }
+    
+    @objc
+    private func settingsButtonTapped(_ sender: UIButton) {
+        //
+    }
+    
+    @objc
+    private func helpButtonTapped(_ sender: UIButton) {
+        //
+    }
+    
+}
 
 // MARK: - Animations
 extension MainViewController {
@@ -73,6 +117,8 @@ extension MainViewController {
         self.startButton.isEnabled = false
         self.helpButton.alpha = 0.0
         self.helpButton.isEnabled = false
+        self.settingsButton.alpha = 0.0
+        self.settingsButton.isEnabled = false
     }
     
     private func startupAnimation() {
@@ -82,16 +128,17 @@ extension MainViewController {
         let startupAnimator: UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 0.0, timingParameters: timingParameters)
         
         startupAnimator.addAnimations {
-            self.logoImageView.transform = CGAffineTransform(translationX: 0.0, y: -60.0)
+            let verticalTransition = self.view.bounds.height * 0.25
+            self.logoImageView.transform = CGAffineTransform(translationX: 0.0, y: -verticalTransition)
             self.startButton.alpha = 1.0
             self.helpButton.alpha = 1.0
+            self.settingsButton.alpha = 1.0
         }
         
         startupAnimator.addCompletion { _ in
             self.startButton.isEnabled = true
             self.helpButton.isEnabled = true
-            
-            self.startupAnimation()
+            self.settingsButton.isEnabled = true
         }
         
         startupAnimator.startAnimation()

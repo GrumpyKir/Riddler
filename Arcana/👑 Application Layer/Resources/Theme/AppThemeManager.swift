@@ -9,15 +9,15 @@
 import UIKit
 
 enum AppThemeType: String {
-    case light = "THEME_LIGHT"
+    case dark = "THEME_LIGHT"
     
-    static let base: AppThemeType = .light
+    static let base: AppThemeType = .dark
     
     init(value: String?) {
         if let value = value {
             switch value {
-            case AppThemeType.light.rawValue:
-                self = .light
+            case AppThemeType.dark.rawValue:
+                self = .dark
             default:
                 self = AppThemeType.base
             }
@@ -32,7 +32,7 @@ enum AppThemeType: String {
     
     var title: String {
         switch self {
-        case .light:
+        case .dark:
             return AppLocalization.Theme.light.localized
         }
     }
@@ -64,7 +64,7 @@ class AppThemeManager {
     
     // MARK: - Supported themes
     public static var list: [AppThemeType] {
-        return [.light]
+        return [.dark]
     }
     
     // MARK: - Props

@@ -12,6 +12,7 @@ enum MainLocalization: String, Localizable {
     
     case navigationTitle = "MAIN_TITLE"
     case startButtonTitle = "MAIN_START_TITLE"
+    case settingsButtonTitle = "MAIN_SETTINGS_TITLE"
     case helpButtonTitle = "MAIN_HELP_TITLE"
     
 }

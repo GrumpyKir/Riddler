@@ -8,7 +8,9 @@
 
 import GKViper
 
-protocol MainRouterInput: ViperRouterInput { }
+protocol MainRouterInput: ViperRouterInput {
+    func presentCategoriesController()
+}
 
 class MainRouter: ViperRouter, MainRouterInput {
     
@@ -21,6 +23,15 @@ class MainRouter: ViperRouter, MainRouterInput {
     }
     
     // MARK: - MainRouterInput
+    func presentCategoriesController() {
+        let vc = CategoriesAssembly.create()
+        _ = CategoriesAssembly.configure(with: vc)
+        
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        
+        self.present(vc, animated: true)
+    }
     
     // MARK: - Module functions
 }

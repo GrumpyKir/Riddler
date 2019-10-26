@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		AD1F567DBFE1982D945BCB94 /* Pods_Arcana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F9E9FE4D21B3A93FE9B139 /* Pods_Arcana.framework */; };
 		ED213EBE2364460A00A56E1C /* UISpringTimingParameters+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EBD2364460A00A56E1C /* UISpringTimingParameters+Initialization.swift */; };
+		ED213EC72364506900A56E1C /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EC02364506900A56E1C /* CategoriesViewModel.swift */; };
+		ED213EC82364506900A56E1C /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EC12364506900A56E1C /* CategoriesViewController.swift */; };
+		ED213EC92364506900A56E1C /* CategoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EC22364506900A56E1C /* CategoriesAssembly.swift */; };
+		ED213ECA2364506900A56E1C /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EC32364506900A56E1C /* CategoriesInteractor.swift */; };
+		ED213ECB2364506900A56E1C /* CategoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EC42364506900A56E1C /* CategoriesRouter.swift */; };
+		ED213ECC2364506900A56E1C /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED213EC52364506900A56E1C /* CategoriesViewController.xib */; };
+		ED213ECD2364506900A56E1C /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213EC62364506900A56E1C /* CategoriesPresenter.swift */; };
+		ED213ED02364507C00A56E1C /* CategoriesLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213ECF2364507C00A56E1C /* CategoriesLocalization.swift */; };
+		ED213ED22364508800A56E1C /* StylyWrapper+Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */; };
 		ED4BA8792364326300A6D4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4BA8782364326300A6D4BF /* AppDelegate.swift */; };
 		ED4BA8822364326600A6D4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4BA8812364326600A6D4BF /* Assets.xcassets */; };
 		ED4BA8852364326600A6D4BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4BA8832364326600A6D4BF /* LaunchScreen.storyboard */; };
@@ -49,7 +58,16 @@
 		AB567A15B201AF85E1099795 /* Pods-Arcana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arcana.release.xcconfig"; path = "Target Support Files/Pods-Arcana/Pods-Arcana.release.xcconfig"; sourceTree = "<group>"; };
 		C5F9E9FE4D21B3A93FE9B139 /* Pods_Arcana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arcana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED213EBD2364460A00A56E1C /* UISpringTimingParameters+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISpringTimingParameters+Initialization.swift"; sourceTree = "<group>"; };
-		ED4BA8752364326300A6D4BF /* Arcana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arcana.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED213EC02364506900A56E1C /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		ED213EC12364506900A56E1C /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		ED213EC22364506900A56E1C /* CategoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAssembly.swift; sourceTree = "<group>"; };
+		ED213EC32364506900A56E1C /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
+		ED213EC42364506900A56E1C /* CategoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRouter.swift; sourceTree = "<group>"; };
+		ED213EC52364506900A56E1C /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
+		ED213EC62364506900A56E1C /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		ED213ECF2364507C00A56E1C /* CategoriesLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLocalization.swift; sourceTree = "<group>"; };
+		ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StylyWrapper+Categories.swift"; sourceTree = "<group>"; };
+		ED4BA8752364326300A6D4BF /* Riddler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Riddler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4BA8782364326300A6D4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4BA8812364326600A6D4BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4BA8842364326600A6D4BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,6 +135,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ED213EBF2364501F00A56E1C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ED213EC22364506900A56E1C /* CategoriesAssembly.swift */,
+				ED213EC32364506900A56E1C /* CategoriesInteractor.swift */,
+				ED213EC62364506900A56E1C /* CategoriesPresenter.swift */,
+				ED213EC42364506900A56E1C /* CategoriesRouter.swift */,
+				ED213EC12364506900A56E1C /* CategoriesViewController.swift */,
+				ED213EC52364506900A56E1C /* CategoriesViewController.xib */,
+				ED213EC02364506900A56E1C /* CategoriesViewModel.swift */,
+				ED213ECE2364506F00A56E1C /* Resources */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		ED213ECE2364506F00A56E1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED213ECF2364507C00A56E1C /* CategoriesLocalization.swift */,
+				ED213ED12364508800A56E1C /* StylyWrapper+Categories.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		ED4BA86C2364326300A6D4BF = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +172,7 @@
 		ED4BA8762364326300A6D4BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED4BA8752364326300A6D4BF /* Arcana.app */,
+				ED4BA8752364326300A6D4BF /* Riddler.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,6 +310,7 @@
 		ED5E8A9923643B02004F8CE6 /* User Stories */ = {
 			isa = PBXGroup;
 			children = (
+				ED213EBF2364501F00A56E1C /* Categories */,
 				ED5E8AA523643D65004F8CE6 /* Main */,
 				ED5E8AA423643D56004F8CE6 /* Initial */,
 			);
@@ -373,7 +416,7 @@
 			);
 			name = Arcana;
 			productName = Arcana;
-			productReference = ED4BA8752364326300A6D4BF /* Arcana.app */;
+			productReference = ED4BA8752364326300A6D4BF /* Riddler.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -417,6 +460,7 @@
 			files = (
 				ED4BA8852364326600A6D4BF /* LaunchScreen.storyboard in Resources */,
 				ED4BA897236435BC00A6D4BF /* Localizable.strings in Resources */,
+				ED213ECC2364506900A56E1C /* CategoriesViewController.xib in Resources */,
 				ED5E8AC923643E78004F8CE6 /* MainViewController.xib in Resources */,
 				ED4BA8822364326600A6D4BF /* Assets.xcassets in Resources */,
 				ED5E8AB223643D79004F8CE6 /* InitialViewController.xib in Resources */,
@@ -502,22 +546,30 @@
 				ED5E8AB323643D79004F8CE6 /* InitialPresenter.swift in Sources */,
 				ED5E8A9423643A20004F8CE6 /* Stylable.swift in Sources */,
 				ED4BA89D2364361200A6D4BF /* AppLocalization.swift in Sources */,
+				ED213ED22364508800A56E1C /* StylyWrapper+Categories.swift in Sources */,
 				ED5E8AB023643D79004F8CE6 /* InitialInteractor.swift in Sources */,
+				ED213EC82364506900A56E1C /* CategoriesViewController.swift in Sources */,
 				ED4BA8A1236436A700A6D4BF /* Localizable.swift in Sources */,
 				ED5E8ACE23643EA9004F8CE6 /* MainLocalization.swift in Sources */,
 				ED4BA8792364326300A6D4BF /* AppDelegate.swift in Sources */,
 				ED5E8AB123643D79004F8CE6 /* InitialRouter.swift in Sources */,
+				ED213ED02364507C00A56E1C /* CategoriesLocalization.swift in Sources */,
 				ED5E8AD023643EBE004F8CE6 /* StyleWrapper+Main.swift in Sources */,
+				ED213ECD2364506900A56E1C /* CategoriesPresenter.swift in Sources */,
 				ED5E8AC823643E78004F8CE6 /* MainRouter.swift in Sources */,
 				ED5E8AC423643E78004F8CE6 /* MainViewModel.swift in Sources */,
 				ED5E8AA323643C88004F8CE6 /* AppThemeManager.swift in Sources */,
 				ED5E8A9623643A2B004F8CE6 /* StyleWrapper.swift in Sources */,
+				ED213EC72364506900A56E1C /* CategoriesViewModel.swift in Sources */,
 				ED5E8ACA23643E78004F8CE6 /* MainPresenter.swift in Sources */,
+				ED213EC92364506900A56E1C /* CategoriesAssembly.swift in Sources */,
 				ED4BA8A3236436C000A6D4BF /* AppLocalizationManager.swift in Sources */,
+				ED213ECA2364506900A56E1C /* CategoriesInteractor.swift in Sources */,
 				ED4BA8A52364376200A6D4BF /* AppDefaults.swift in Sources */,
 				ED5E8AAD23643D79004F8CE6 /* InitialViewModel.swift in Sources */,
 				ED5E8A902364390C004F8CE6 /* AppAssets.swift in Sources */,
 				ED5E8AC623643E78004F8CE6 /* MainAssembly.swift in Sources */,
+				ED213ECB2364506900A56E1C /* CategoriesRouter.swift in Sources */,
 				ED5E8AC723643E78004F8CE6 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,8 +728,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.arcana.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.riddler.app;
+				PRODUCT_NAME = Riddler;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -697,8 +749,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.arcana.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.riddler.app;
+				PRODUCT_NAME = Riddler;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -30,7 +30,7 @@ enum AppLocalization {
     }
     
     enum Theme: String, Localizable {
-        case light  = "APP_THEME_LIGHT"
+        case light  = "APP_THEME_DARK"
     }
     
     enum Language: String, Localizable {

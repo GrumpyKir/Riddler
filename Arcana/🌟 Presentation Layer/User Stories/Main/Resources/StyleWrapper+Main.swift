@@ -10,9 +10,19 @@ import UIKit
 
 extension StyleWrapper where Element: UIButton {
     
-    /// make button corner radius = 8
-    static func startButtonStyle() -> StyleWrapper {
+    static func categoriesButtonStyle() -> StyleWrapper {
         return .wrap { button in
+            button.setTitle(MainLocalization.startButtonTitle.localized, for: [])
+            button.setTitleColor(AppTheme.textMain, for: [])
+            button.backgroundColor = AppTheme.backgroundContent
+            button.layer.cornerRadius = button.bounds.height * 0.5
+            button.layer.masksToBounds = true
+        }
+    }
+    
+    static func settingsButtonStyle() -> StyleWrapper {
+        return .wrap { button in
+            button.setTitle(MainLocalization.settingsButtonTitle.localized, for: [])
             button.setTitleColor(AppTheme.textMain, for: [])
             button.backgroundColor = AppTheme.backgroundContent
             button.layer.cornerRadius = button.bounds.height * 0.5
@@ -22,6 +32,7 @@ extension StyleWrapper where Element: UIButton {
     
     static func helpButtonStyle() -> StyleWrapper {
         return .wrap { button in
+            button.setTitle(MainLocalization.helpButtonTitle.localized, for: [])
             button.setTitleColor(AppTheme.textMain, for: [])
             button.backgroundColor = AppTheme.backgroundContent
             button.layer.cornerRadius = button.bounds.height * 0.5

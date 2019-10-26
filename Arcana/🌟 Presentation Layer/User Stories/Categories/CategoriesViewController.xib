@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesViewController" customModule="Arcana" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="XfH-pr-fiz" id="t2T-z7-yHu"/>
+                <outlet property="categoriesTableView" destination="4QY-CD-vTV" id="UJC-qi-rI2"/>
+                <outlet property="closeButton" destination="OiX-oR-o9T" id="UkD-h0-nhx"/>
+                <outlet property="startButton" destination="LTr-ON-SjP" id="gnk-7j-YQ3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Rz8-f9-Cv3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfH-pr-fiz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4QY-CD-vTV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTr-ON-SjP">
+                    <rect key="frame" x="47" y="575" width="281" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="RfP-dU-YMR"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiX-oR-o9T">
+                    <rect key="frame" x="47" y="32" width="281" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="VQp-l3-FXF"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XfH-pr-fiz" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="2PN-bn-alO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LTr-ON-SjP" secondAttribute="bottom" constant="32" id="4zF-IS-zrL"/>
+                <constraint firstItem="XfH-pr-fiz" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="98y-PY-Xxb"/>
+                <constraint firstItem="OiX-oR-o9T" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="B6j-9u-QVj"/>
+                <constraint firstItem="XfH-pr-fiz" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="BmS-N3-ZT7"/>
+                <constraint firstItem="OiX-oR-o9T" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="InR-aD-9ln"/>
+                <constraint firstItem="XfH-pr-fiz" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="MJn-m6-tNI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4QY-CD-vTV" secondAttribute="bottom" id="c7s-Jf-pn8"/>
+                <constraint firstItem="4QY-CD-vTV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cM6-9D-U8n"/>
+                <constraint firstItem="4QY-CD-vTV" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="dsm-51-3Ja"/>
+                <constraint firstItem="LTr-ON-SjP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gb0-ur-NXY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4QY-CD-vTV" secondAttribute="trailing" id="iVu-CM-hdG"/>
+                <constraint firstItem="LTr-ON-SjP" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="opI-Ce-ZRO"/>
+                <constraint firstItem="4QY-CD-vTV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="q2s-Uc-4gb"/>
+                <constraint firstItem="OiX-oR-o9T" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="tIg-kn-Kjz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="135" y="154"/>
+        </view>
+    </objects>
+</document>

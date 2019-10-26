@@ -48,6 +48,10 @@ class MainPresenter: ViperPresenter, MainPresenterInput, MainViewOutput, MainInt
         self.view?.setupInitialState(with: self.viewModel)
     }
     
+    func goToCategories() {
+        self.router?.presentCategoriesController()
+    }
+    
     // MARK: - MainInteractorOutput
     
     // MARK: - Module functions

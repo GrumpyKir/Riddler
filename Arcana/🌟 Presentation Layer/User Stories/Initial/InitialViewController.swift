@@ -15,6 +15,7 @@ protocol InitialViewOutput: ViperViewOutput { }
 class InitialViewController: ViperViewController, InitialViewInput {
 
     // MARK: - Outlets
+    @IBOutlet private weak var backgroundImageView: UIImageView!
     @IBOutlet private weak var logoImageView: UIImageView!
     
     // MARK: - Props
@@ -24,6 +25,10 @@ class InitialViewController: ViperViewController, InitialViewInput {
     }
     
     // MARK: - Lifecycle
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLayoutSubviews() {
         self.applyStyles()
     }
@@ -33,14 +38,16 @@ class InitialViewController: ViperViewController, InitialViewInput {
         self.navigationItem.title = InitialLocalization.navigationTitle.localized
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        self.logoImageView.image = AppAssets.wipLogo
+        self.backgroundImageView.image = AppAssets.appBackground
+        self.logoImageView.image = AppAssets.appLogo
     }
     
     func setupActions() { }
     
     func applyStyles() {
         self.view.apply(.backgroundViewStyle())
-        self.logoImageView.apply(.generalStyle())
+        self.backgroundImageView.apply(.generalFillStyle())
+        self.logoImageView.apply(.generalFillStyle())
     }
     
     // MARK: - InitialViewInput

@@ -36,3 +36,6 @@
 "MAIN_TITLE"        = "";
 "MAIN_START_TITLE"  = "Start";
 "MAIN_HELP_TITLE"   = "?";
+
+//MARK: - Categories
+"CATEGORIES_TITLE"  = "";

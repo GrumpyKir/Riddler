@@ -47,7 +47,11 @@ class InitialPresenter: ViperPresenter, InitialPresenterInput, InitialViewOutput
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
         
-        self.router?.presentMainViewController()
+        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { [weak self] _ in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.router?.presentMainViewController()
+        })
     }
     
     // MARK: - InitialInteractorOutput

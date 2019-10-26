@@ -25,7 +25,7 @@ class InitialRouter: ViperRouter, InitialRouterInput {
     // MARK: - InitialRouterInput
     func presentMainViewController() {
         let vc = MainAssembly.create()
-        let _ = MainAssembly.configure(with: vc)
+        _ = MainAssembly.configure(with: vc)
         
         vc.modalPresentationStyle = .fullScreen
         

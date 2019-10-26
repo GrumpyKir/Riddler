@@ -23,13 +23,26 @@ extension StyleWrapper where Element: UIView {
         }
     }
     
+    static func backgroundClearStyle() -> StyleWrapper {
+        return .wrap { view in
+            view.backgroundColor = .clear
+        }
+    }
+    
 }
 
 extension StyleWrapper where Element: UIImageView {
     
-    static func generalStyle() -> StyleWrapper {
+    static func generalFitStyle() -> StyleWrapper {
         return .wrap { imageView in
             imageView.contentMode = .scaleAspectFit
+            imageView.layer.masksToBounds = true
+        }
+    }
+    
+    static func generalFillStyle() -> StyleWrapper {
+        return .wrap { imageView in
+            imageView.contentMode = .scaleAspectFill
             imageView.layer.masksToBounds = true
         }
     }
