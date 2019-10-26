@@ -14,7 +14,10 @@ protocol CategoriesViewInput: ViperViewInput {
     func updateForSections(_ sections: [TableSectionModel])
 }
 
-protocol CategoriesViewOutput: ViperViewOutput { }
+protocol CategoriesViewOutput: ViperViewOutput {
+    func selectCategory(_ category: CategoryModel)
+    func startGame()
+}
 
 class CategoriesViewController: ViperViewController, CategoriesViewInput {
 
@@ -74,6 +77,7 @@ class CategoriesViewController: ViperViewController, CategoriesViewInput {
     
     func setupActions() {
         self.backButton.addTarget(self, action: #selector(self.backButtonTapped(_:)), for: .touchUpInside)
+        self.startButton.addTarget(self, action: #selector(self.startButtonTapped(_:)), for: .touchUpInside)
     }
     
     func applyStyles() {
@@ -120,6 +124,11 @@ extension CategoriesViewController {
     @objc
     private func backButtonTapped(_ sender: UIButton) {
         self.output?.close(animated: true)
+    }
+    
+    @objc
+    private func startButtonTapped(_ sender: UIButton) {
+        self.output?.startGame()
     }
     
 }
@@ -199,32 +208,16 @@ extension CategoriesViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let selectedModel = self.sections[indexPath.section].rows[indexPath.row] as? DiaryWorkoutCellModel else { return }
-//        guard let selectedId = selectedModel.userInfo["workoutId"] as? String else { return }
-//        let models = self.sections[indexPath.section].rows
-//
-//        for model in models {
-//            guard let diaryWorkoutModel = model as? DiaryWorkoutCellModel else { continue }
-//            guard let diaryWorkoutId = diaryWorkoutModel.userInfo["workoutId"] as? String else { return }
-//
-//            if diaryWorkoutId == selectedId {
-//                diaryWorkoutModel.expanded.toggle()
-//            } else {
-//                diaryWorkoutModel.expanded = false
-//            }
-//        }
-//
-//        DispatchQueue.main.async { [weak self] in
-//            guard let strongSelf = self else { return }
-//
-//            if selectedModel.expanded && strongSelf.calendarView.scope == .month {
-//                strongSelf.calendarView.setScope(.week, animated: true)
-//            }
-//
-//            strongSelf.tableView.beginUpdates()
-//            strongSelf.tableView.endUpdates()
-//            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-//        }
+        guard let selectedModel = self.sections[indexPath.section].rows[indexPath.row] as? CategoryCellModel else { return }
+        
+        self.output?.selectCategory(selectedModel.category)
+        
+        selectedModel.isSelected.toggle()
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.categoriesTableView.reloadRows(at: [indexPath], with: .fade)
+        }
     }
     
 }

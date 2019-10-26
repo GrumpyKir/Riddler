@@ -51,17 +51,33 @@ class CategoriesPresenter: ViperPresenter, CategoriesPresenterInput, CategoriesV
         self.interactor?.loadCategories()
     }
     
+    func selectCategory(_ category: CategoryModel) {
+        if let index = self.viewModel.selectedCategories.firstIndex(where: { $0 == category.identifier }) {
+            self.viewModel.selectedCategories.remove(at: index)
+        } else {
+            self.viewModel.selectedCategories.append(category.identifier)
+        }
+    }
+    
+    func startGame() {
+        self.view?.show(title: nil, message: "\(self.viewModel.selectedCategories)", animated: true)
+    }
+    
     // MARK: - CategoriesInteractorOutput
     func provideCategories(_ categories: [CategoryModel]) {
-        self.makeSectionsModel(with: categories)
+        self.viewModel.categories = categories
+        self.viewModel.selectedCategories = []
+        
+        self.makeSectionsModel(with: categories, selectedCategories: self.viewModel.selectedCategories)
     }
     
     // MARK: - Module functions
-    private func makeSectionsModel(with categories: [CategoryModel]) {
+    private func makeSectionsModel(with categories: [CategoryModel], selectedCategories: [Int]) {
         let mainSection = TableSectionModel()
         
         for category in categories {
             let categoryRow = CategoryCellModel(category: category)
+            categoryRow.isSelected = selectedCategories.contains(category.identifier)
             mainSection.rows.append(categoryRow)
         }
         

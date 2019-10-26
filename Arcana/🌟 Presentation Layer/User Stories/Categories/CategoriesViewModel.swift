@@ -9,5 +9,11 @@
 import GKViper
 
 class CategoriesViewModel: ViperViewModel {
+    var categories: [CategoryModel]
+    var selectedCategories: [Int]
     
+    override init() {
+        self.categories = []
+        self.selectedCategories = []
+    }
 }

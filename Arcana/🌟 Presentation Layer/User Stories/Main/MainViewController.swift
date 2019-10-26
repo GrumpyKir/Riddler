@@ -109,12 +109,12 @@ extension MainViewController {
     
     @objc
     private func settingsButtonTapped(_ sender: UIButton) {
-        //
+        self.show(title: nil, message: "WIP", animated: true)
     }
     
     @objc
     private func helpButtonTapped(_ sender: UIButton) {
-        //
+        self.show(title: nil, message: "WIP", animated: true)
     }
     
 }
