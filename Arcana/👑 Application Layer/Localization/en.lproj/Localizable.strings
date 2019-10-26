@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Arcana
+
+  Created by  Кирилл on 10/26/19.
+  Copyright © 2019 AppCraft. All rights reserved.
+*/
+
+// MARK: - Common
+"OK"            = "OK";
+"SAVE"          = "Save";
+"CANCEL"        = "Cancel";
+"CLOSE"         = "Close";
+"ATTENSION"     = "Attention!";
+"UNKNOWN"       = "Unknown";
+"LOADING"       = "Loading";
+"REFRESH"       = "Refresh";
+"TRY_AGAIN"     = "Try Again";
+"YES"           = "Yes";
+"NO"            = "No";
+"ERROR"         = "Error";
+"WARNING"       = "Warning";
+"CONTINUE"      = "Continue";
+"SEARCH"        = "Search";
+"NEXT"          = "Next";
+
+// MARK: - Themes and languages
+"APP_THEME_LIGHT"   = "Light";
+"APP_LANG_ENG"      = "English";
+"APP_LANG_RUS"      = "Russian";
+
+// MARK: - Initial
+"INITIAL_TITLE" = "";
+
+// MARK: - Main
+"MAIN_TITLE"        = "";
+"MAIN_START_TITLE"  = "Start";
+"MAIN_HELP_TITLE"   = "?";
