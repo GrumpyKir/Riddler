@@ -61,6 +61,10 @@ class MainViewController: ViperViewController, MainViewInput {
         self.progressTitleLabel.text = String(format: MainLocalization.progressTitle.localized, "\(1)")
         self.progressView.progress = 0.65
         self.progressHintLabel.text = String(format: MainLocalization.progressHint.localized, "\(30)")
+        
+        self.startButton.setTitle(MainLocalization.startButtonTitle.localized, for: [])
+        self.settingsButton.setTitle("", for: [])
+        self.helpButton.setTitle("", for: [])
     }
     
     func setupActions() {
@@ -129,7 +133,7 @@ extension MainViewController {
     private func startupAnimation() {
         self.prepareStartupAnimation()
         
-        let timingParameters = UISpringTimingParameters(damping: 0.75, response: 1.0)
+        let timingParameters = UISpringTimingParameters(damping: 0.75, response: 0.7)
         let startupAnimator: UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 0.0, timingParameters: timingParameters)
         
         startupAnimator.addAnimations {

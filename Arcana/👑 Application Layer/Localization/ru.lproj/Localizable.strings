@@ -42,5 +42,6 @@
 
 //MARK: - Categories
 "CATEGORIES_TITLE"  = "";
+"CATEGORIES_BACK_TITLE"  = "Назад";
+"CATEGORIES_TABLE_TITLE"  = "Выберите категории";
 "CATEGORIES_START_TITLE"  = "Начать";
-"CATEGORIES_CLOSE_TITLE"  = "Назад";

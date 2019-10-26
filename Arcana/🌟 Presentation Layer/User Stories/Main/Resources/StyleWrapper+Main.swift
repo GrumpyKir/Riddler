@@ -35,7 +35,6 @@ extension StyleWrapper where Element: UIButton {
     
     static func playButtonStyle() -> StyleWrapper {
         return .wrap { button in
-            button.setTitle(MainLocalization.startButtonTitle.localized, for: [])
             button.setTitleColor(AppTheme.accentTextMain, for: [])
             button.titleLabel?.font = FiraSans.semibold.font(size: 24.0)
             button.backgroundColor = GradientColor(.topToBottom, frame: button.bounds, colors: AppTheme.accentGradient)
@@ -46,7 +45,6 @@ extension StyleWrapper where Element: UIButton {
     
     static func settingsButtonStyle() -> StyleWrapper {
         return .wrap { button in
-            button.setTitle("", for: [])
             button.setImage(AppAssets.settingsIcon, for: [])
             button.imageView?.setImageColor(color: AppTheme.accentMain)
             button.backgroundColor = AppTheme.backgroundControl
@@ -73,7 +71,7 @@ extension StyleWrapper where Element: UIProgressView {
     static func progressStyle() -> StyleWrapper {
         return .wrap { progress in
             progress.progressTintColor = AppTheme.accentMain
-            progress.trackTintColor = AppTheme.backgroundContent
+            progress.trackTintColor = AppTheme.backgroundContent(alpha: 1.0)
         }
     }
     

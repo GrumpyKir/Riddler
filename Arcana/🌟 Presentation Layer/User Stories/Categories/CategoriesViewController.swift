@@ -15,10 +15,19 @@ protocol CategoriesViewOutput: ViperViewOutput { }
 class CategoriesViewController: ViperViewController, CategoriesViewInput {
 
     // MARK: - Outlets
+    @IBOutlet private weak var backgroundGradientView: UIVisualEffectView!
     @IBOutlet private weak var backgroundView: UIView!
+        
+    @IBOutlet private weak var backBackgroundView: UIView!
+    @IBOutlet private weak var backImageView: UIImageView!
+    @IBOutlet private weak var backLabel: UILabel!
+    @IBOutlet private weak var backButton: UIButton!
+    
+    @IBOutlet private weak var categoriesBackgroundView: UIView!
+    @IBOutlet private weak var categoriesTitleLabel: UILabel!
     @IBOutlet private weak var categoriesTableView: UITableView!
+    
     @IBOutlet private weak var startButton: UIButton!
-    @IBOutlet private weak var closeButton: UIButton!
     
     // MARK: - Props
     fileprivate var output: CategoriesViewOutput? {
@@ -35,24 +44,42 @@ class CategoriesViewController: ViperViewController, CategoriesViewInput {
         self.applyStyles()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.startupAnimation()
+    }
+    
     // MARK: - Setup functions
     func setupComponents() {
         self.navigationItem.title = CategoriesLocalization.navigationTitle.localized
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        self.backLabel.text = CategoriesLocalization.backTitle.localized
+        self.categoriesTitleLabel.text = CategoriesLocalization.categoryTitle.localized
+        
+        self.startButton.setTitle(CategoriesLocalization.startTitle.localized, for: [])
     }
     
     func setupActions() {
-        self.closeButton.addTarget(self, action: #selector(self.closeButtonTapped(_:)), for: .touchUpInside)
+        self.backButton.addTarget(self, action: #selector(self.backButtonTapped(_:)), for: .touchUpInside)
     }
     
     func applyStyles() {
         self.view.apply(.backgroundClearStyle())
-        self.backgroundView.apply(.categoriesBackgroundStyle())
-        let topInset = self.closeButton.bounds.height + 8.0
-        let bottomInset = self.startButton.bounds.height + 8.0
-        self.categoriesTableView.apply(.categoriesTableViewStyle(topInset: topInset, bottomInset: bottomInset))
+        self.backgroundGradientView.apply(.blurBackgroundStyle())
+        self.backgroundView.apply(.backgrondStyle())
+        
+        self.backBackgroundView.apply(.backBackgrondStyle())
+        self.backImageView.apply(.backImageStyle())
+        self.backLabel.apply(.backTitleStyle())
+        self.backButton.apply(.backButtonStyle())
+        
+        self.categoriesBackgroundView.apply(.categoriesBackgroundStyle())
+        self.categoriesTitleLabel.apply(.categoriesTitleStyle())
+        self.categoriesTableView.apply(.categoriesTableViewStyle())
+        
         self.startButton.apply(.startButtonStyle())
-        self.closeButton.apply(.closeButtonStyle())
     }
     
     // MARK: - CategoriesViewInput
@@ -69,8 +96,37 @@ class CategoriesViewController: ViperViewController, CategoriesViewInput {
 extension CategoriesViewController {
     
     @objc
-    private func closeButtonTapped(_ sender: UIButton) {
+    private func backButtonTapped(_ sender: UIButton) {
         self.output?.close(animated: true)
+    }
+    
+}
+
+// MARK: - Animations
+extension CategoriesViewController {
+    
+    private func prepareStartupAnimation() {
+        self.backBackgroundView.alpha = 0.0
+        let verticalTransition = self.categoriesBackgroundView.bounds.height
+        self.categoriesBackgroundView.transform = CGAffineTransform(translationX: 0.0, y: verticalTransition)
+    }
+    
+    private func startupAnimation() {
+        self.prepareStartupAnimation()
+        
+        let timingParameters = UISpringTimingParameters(damping: 0.85, response: 0.5)
+        let startupAnimator: UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 0.0, timingParameters: timingParameters)
+        
+        startupAnimator.addAnimations {
+            self.backBackgroundView.alpha = 1.0
+            self.categoriesBackgroundView.transform = .identity
+        }
+        
+        startupAnimator.addCompletion { _ in
+            //
+        }
+        
+        startupAnimator.startAnimation()
     }
     
 }
